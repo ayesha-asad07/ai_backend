@@ -17,7 +17,7 @@ app.post('/chat', async (req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",  // Use "gpt-3.5-turbo" for a cheaper option
             messages: [
-                { role: "system", content: "You are a helpful chatbot specialized in pregnancy guidance." },
+                { role: "system", content: "You are a helpful chatbot specialized in pregnancy guidance.Whenever a user tells any symptoms, ask for her age, pregnancy week and then some other related questions and do a deep web search before prescrbing any exercise or medicine." },
                 { role: "user", content: userMessage }
             ]
         });
